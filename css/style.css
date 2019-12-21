@@ -1,3 +1,30 @@
+
+.scroll{
+  border: none;
+  height: 10px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #ff0000;
+  color: #ffffff;
+  margin-top: 10px;
+
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: .75s;
+  animation-direction: alternate;  
+}
+
+@keyframes fade{
+    0%,100% {
+      opacity: 0;
+}
+    100%{
+      opacity: 1;
+  }
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -6,7 +33,6 @@ html, body{
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
-/*#A2FAF7*/
 
 header{
     position: absolute;
@@ -22,6 +48,10 @@ a{
   color: #ff0000;
 }
 
+.container{
+    overflow: hidden;
+}
+
 #globalArea{
     height: 100%;
     width: 100%;
@@ -35,35 +65,35 @@ a{
 }
 
 .button_area{
+    border: none;
     position: absolute;
     background-color: #fff;
-/*    opacity: .9;*/
     color: #222;
     display: inline-block;
     font-size: 12pt;
     display: none;
     z-index: 100;
-          top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100px;
-  max-width: 500px;
-  width: 100%;
-  border-radius: 10px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 125px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .click1{
     background-color: #fff;
     color: #ff0000;
     position: absolute;
-            -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
     transition: all 0.3s ease;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+    bottom: -3;
+    width: 100%;
+    text-align: center;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -73,15 +103,15 @@ a{
     background-color: #fff;
     color: #ff0000;
     position: absolute;
-            -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
     transition: all 0.3s ease;
-  display: none;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+    display: none;
+    bottom: -3;
+    width: 100%;
+    text-align: center;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -91,15 +121,15 @@ a{
     background-color: #fff;
     color: #ff0000;
     position: absolute;
-            -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
     transition: all 0.3s ease;
-  display: none;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+    display: none;
+    bottom: -3;
+    width: 100%;
+    text-align: center;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -109,35 +139,35 @@ a{
     background-color: #fff;
     color: #ff0000;
     position: absolute;
-            -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
     transition: all 0.3s ease;
     display: none;
-  bottom: 0;
-  width: 500px;
-  text-align: center;
+    bottom: 0;
+    width: 500px;
+    text-align: center;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-      left: 50%;
-  transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .click_end{
     background-color: #fff;
     color: #ff0000;
     position: absolute;
-            -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
     transition: all 0.3s ease;
-  display: none;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+    display: none;
+    bottom: -3;
+    width: 100%;
+    text-align: center;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -155,13 +185,16 @@ a{
     display: none;
     z-index: 100;
     text-align: center;
+    overflow: scroll;
+    max-height: 300px;
+    min-height: 300px;
 }
 
 .click1:hover{
     cursor: pointer;
     background-color: #F15A22;
     color: #fff;
-        -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
@@ -173,7 +206,7 @@ a{
     cursor: pointer;
     background-color: #F15A22;
     color: #fff;
-        -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
@@ -185,7 +218,7 @@ a{
     cursor: pointer;
     background-color: #F15A22;
     color: #fff;
-        -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
@@ -197,7 +230,7 @@ a{
     cursor: pointer;
     background-color: #F15A22;
     color: #fff;
-        -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
@@ -209,7 +242,7 @@ a{
     cursor: pointer;
     background-color: #F15A22;
     color: #fff;
-        -webkit-transition: all 0.3s ease;                  
+    -webkit-transition: all 0.3s ease;                  
     -moz-transition: all 0.3s ease;                 
     -o-transition: all 0.3s ease;   
     -ms-transition: all 0.3s ease;          
@@ -229,6 +262,44 @@ a{
     margin-right: 25px;
 }
 
+  @media only screen and (max-width: 600px) {
+    #staging_vid_mobile {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    }
+    #staging_vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 0; 
+    height: 0;
+    min-width: 0; 
+    min-height: 0;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    #staging_vid_mobile {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 0; 
+    height: 0;
+    min-width: 0; 
+    min-height: 0;
+    }
+    #staging_vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    }
+  }
+
 .staging_vid{
     position: absolute;
     top: 0;
@@ -236,6 +307,19 @@ a{
     width: 100%;
     display: none;
     height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #fff;
+}
+
+.staging_vid_mobile{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    height: 100%;
+    min-height: 100%;
     min-width: 100%;
     background-color: #fff;
 }
@@ -245,21 +329,20 @@ a{
     min-width: 100%;
 }
 
-@media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 750px) {
 
-.info1, .info2, .info3{
-    background-color: #fff;
-    color: #ff0000;
-    position: absolute;
-    width: 250px;
-    right: 0;
-    margin-right: 5%;
-    margin-top: 255px;
-    border-top: solid 4px #ff0000;
-    display: none;
-    z-index: 100;
-    text-align: center;
-}
-
+    .info1, .info2, .info3{
+        background-color: #fff;
+        color: #ff0000;
+        position: absolute;
+        width: 250px;
+        right: 0;
+        margin-right: 5%;
+        margin-top: 255px;
+        border-top: solid 4px #ff0000;
+        display: none;
+        z-index: 100;
+        text-align: center;
+    }
   }
 }

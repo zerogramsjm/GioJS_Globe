@@ -79,7 +79,7 @@ var GIO = function(A) {
             //STARTING ROTATION
             //STARTING ROTATION
 
-            f = C.lat * Math.PI / 125;
+            f = C.lat * Math.PI / 175;
             for (var g = -(C.lon - 9) * Math.PI / 150, I = 0;;) {
                 var r = g - 2 * Math.PI * I,
                     e = g + 2 * Math.PI * I;
@@ -114,10 +114,10 @@ var GIO = function(A) {
                 o += A
             },
             setDragging: function(A) {
-                n = A
+                false();
             },
             isDragging: function() {
-                return n
+                false();
             },
             clearRotateTargetX: function() {
                 f = void 0
@@ -294,8 +294,8 @@ var GIO = function(A) {
         var cursorX;
         var cursorY;
         document.onmousemove = function(e){
-            cursorX = e.pageX;
-            cursorY = e.pageY;
+            cursorX = -e.pageX;
+            cursorY = -e.pageY;
 
         // console.log(cursorX, cursorY);
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" >
-
+<meta name="viewport" content="width=device-width, initial-scale=.7">
 <head>
   <meta charset="UTF-8">
   <title>POD</title>
@@ -25,31 +25,47 @@
   <script src="js/data_IN.js"></script>
   <script src="js/data_OUT.js"></script>
 </head>
-<body>
+<body ondragstart="return false;" ondrop="return false;">
 
 <div class="image"><img src=""></div>
 
 <div class="button_area" id="button_area">
+  <div class="scroll">
+<!--     <img src="assets/scroll.gif" width="50px;" height="50px;" style="margin-left: -10px; margin-top: -10px;"> -->
 
-<div class="info" id="info" style="text-align: center; margin-top: 20px; padding-bottom: 25px">
+scroll down
+
+  </div>
+<div class="info" id="info" style="text-align: center; margin-top: 15px; max-height: 60px;
+      padding-bottom: 25px; 
+        overflow: scroll;
+        padding-right: 5px;
+        padding-left: 4px;
+        position: relative;">
+        <br/>
   Welcome!
 </div>
 
 <br/><br/><br/><br/>
-<div class="click1" id="click1">SOURCING</div>
-<div class="click2" id="click2">STAGING</div>
-<div class="click3" id="click3">DEPLOYMENT</div>
-<div class="click_end" id="click_end">OPERATIONS</div>
+<div class="click1" id="click1" style="margin-top: 300px;">SOURCING</div>
+<div class="click2" id="click2" style="margin-top: 300px;">STAGING</div>
+<div class="click3" id="click3" style="margin-top: 300px;">DEPLOYMENT</div>
+<div class="click_end" id="click_end" onclick="location.href='https://zerograms.io/CAREPACKAGE/operations/';" style="margin-top: 300px;">OPERATIONS</div>
 
 </div>
 
-<div class="clickrestart" style="bottom: 0; z-index: 1000" id="clickrestart">RESTART VIDEO</div>
+<!-- <div class="clickrestart" style="bottom: 0; z-index: 1000" id="clickrestart">RESTART VIDEO</div> -->
 
 <div class="staging_vid" id="staging_vid">
-  <video id="video" src="assets/V7_Docks_DeviceSlide_Clean_GreyDocks_FadeInDown_Color_Stop.mp4" width="100%" height="100%" controls>
+  <video id="video" src="assets/video_desktop.mp4" width="100%" height="100%" controls webkit-playsinline="true" playsinline="true" preload>
+</div>
+
+<div class="staging_vid_mobile" id="staging_vid_mobile">
+  <video id="video_mobile" src="assets/video_mobile.mp4" width="100%" height="100%" controls webkit-playsinline="true" playsinline="true" preload>
 </div>
 
 <div class="globalArea" id="globalArea"></div>
+</div>
 
 </body>
 </html>
